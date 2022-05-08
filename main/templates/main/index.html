@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1>Ваши задачи</h1>
+    {% if tasks %}
+        {% for el in tasks %}
+            <div class="alert alert-warning mt-2">
+                <div class="d-flex flex-wrap align-items-center justify-content-between">
+                    <h3>{{ el.title }}</h3>
+                    <a href="delete/{{ el.id }}"><button type="submit" class="btn-close" data-dismiss="alert" aria-label="Close"></button></a>
+                </div>
+                <p>{{ el.task }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Нет задач</p>
+    {% endif %}
+{% endblock %}
