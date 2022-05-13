@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-tyjl*bel1s4q&b6h6bhyo5*j%pfhnmpq@rf8-e+*m6!qyt2qu2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False  # при разработке должно стоять значение True, чтобы видеть ошибки, при публикации сайта False
 
-ALLOWED_HOSTS = ['http://kofe.pythonanywhere.com/']  # здесь необходимо разместить имена хостов, на которых сайт сможет отображаться
+ALLOWED_HOSTS = ['kofe.pythonanywhere.com']  # здесь необходимо разместить имена хостов, на которых сайт сможет отображаться
 
 
 # Application definition
