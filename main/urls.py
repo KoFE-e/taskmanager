@@ -1,8 +1,8 @@
 from django.urls import path
-from . import views
+from . import views  # импортируем файл views.py
 
-urlpatterns = [
-    path('', views.index, name='home'),
-    path('create', views.create, name='create'),
-    path('delete/<int:id>/', views.delete),
+urlpatterns = [  # шаблоны для путей сайта, ссылки
+    path('', views.index, name='home'),  # ссылка на главную страницу сайта
+    path('create', views.create, name='create'),  # ссылка на страницу создания задачи
+    path('delete/<int:id>/', views.delete),  # ссылка на кнопку удаления задачи
 ]

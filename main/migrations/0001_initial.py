@@ -3,7 +3,7 @@
 from django.db import migrations, models
 
 
-class Migration(migrations.Migration):
+class Migration(migrations.Migration):  # класс, отвечающий за миграции(внесение данных в БД)
 
     initial = True
 

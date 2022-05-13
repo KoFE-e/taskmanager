@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Django's command-line utility for administrative tasks."""
+"""Django's command-line utility for administrative tasks."""  # это файл для работы с сервером и запуском сайта через терминал
 import os
 import sys
 

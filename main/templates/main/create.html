@@ -1,16 +1,16 @@
-{% extends 'main/base.html' %}
+{% extends 'main/base.html' %} <!-- наследование основной части из шаблона base -->
 
 {% block title %}
 Создать задачу
-{% endblock %}
+{% endblock %} <!-- название страницы -->
 
-{% block content %}
+{% block content %} <!-- содержание страницы -->
     <h1>Создать задачу</h1>
     <form method="post">
-        {% csrf_token %}
-        {{ form.title }}<br>
-        {{ form.task }}<br>
-        <button type="submit" class="btn btn-success">Добавить</button>
+        {% csrf_token %}  <!-- необходимый токен для работы с БД -->
+        {{ form.title }}<br>  <!-- форма для названия задачи -->
+        {{ form.task }}<br> <!-- описание самой задачи -->
+        <button type="submit" class="btn btn-success shadow">Добавить</button>
         <span>{{ error }}</span>
     </form>
 {% endblock %}

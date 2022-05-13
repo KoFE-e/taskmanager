@@ -1,22 +1,24 @@
-{% extends 'main/base.html' %}
+{% extends 'main/base.html' %} <!-- наследование основной части из шаблона base -->
 
 {% block title %}
 {{ title }}
-{% endblock %}
+{% endblock %} <!-- название страницы, подставляется из файла views.py -->
 
 {% block content %}
     <h1>Ваши задачи</h1>
-    {% if tasks %}
-        {% for el in tasks %}
-            <div class="alert alert-warning mt-2">
+    {% if tasks %} <!-- if для проверки, есть ли у нас уже готовые задачи -->
+        {% for el in tasks %} <!-- перебор задач в списке tasks и их вывод на сайт -->
+            <div class="alert alert-warning mt-2 shadow-sm">
                 <div class="d-flex flex-wrap align-items-center justify-content-between">
                     <h3>{{ el.title }}</h3>
-                    <a href="delete/{{ el.id }}"><button type="submit" class="btn-close" data-dismiss="alert" aria-label="Close"></button></a>
+                    <a href="delete/{{ el.id }}"><button type="submit" class="btn-close" data-dismiss="alert" aria-label="Close"></button></a> <!-- при нажатии на кнопку из БД удаляется запись с переданным ID -->
                 </div>
                 <p>{{ el.task }}</p>
             </div>
         {% endfor %}
     {% else %}
-        <p>Нет задач</p>
+        <div class="alert alert-warning shadow-sm" role="alert">
+            Нет задач
+        </div>
     {% endif %}
 {% endblock %}
